@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="font/flaticon.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>   
+      
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>WhitePanda</title>
+      <style>
+         body{
+              background-color: #F5F5F5;
+          }
+          .mt-3{
+              padding-left:100px;
+              padding-top:45px;
+              padding-bottom:45px;
+          }
+          .navbar{
+              padding-left:200px;
+              box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+              height:60px;
+          }
+          .topnav-right {
+  float: right;
+}
+        .navbar-nav > li{
+  padding-left:150px;
+  padding-right:30px;
+}
+          .card-text{
+            color:#8c8c8c;
+          }
+          
+          .card-body{
+              background-color: #F8F8F8;
+          }
+          .card-title{
+              color:#3db5c2;
+          }
+          .btn{
+              color:#3db5c2;
+              border-color:#3db5c2;
+          }
+          .active,.btn:hover{
+              background-color: #3db5c2;
+              border-color:#3db5c2;
+          }
+          
+          .img-with-text {
+    text-align: justify;
+    width: [width of img];
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
+          .media{
+              margin-right:10px;
+          }
+          
+          .zoom {
+  padding: 50px;
+  background-color: green;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(0.5); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+          .card:hover h5{
+              color:#3db5c2;
+          }   
+          
+          body{
+              background-color: #F5F5F5;
+          }
+          .mt-3{
+              padding-left:50px;
+              padding-top:45px;
+              padding-bottom:45px;
+          }
+          .navbar{
+              padding-left:165px;
+              box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+              height:60px;
+          }
+        .navbar-nav > li{
+  padding-left:150px;
+  padding-right:30px;
+}
+          
+          .card-body{
+              background-color: #F8F8F8;
+          }
+          .card-title{
+              color:#3db5c2;
+          }
+          .img-with-text {
+    text-align: justify;
+    width: [width of img];
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
+          .media{
+              margin-right:10px;
+          }
+          .side fa:hover{
+              border-right:#3db5c2;
+          }
+          
+          .fa {
+  color: darkgrey;
+}
+          
+          
+.menu, .menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding-top:60px;
+    background: #f7f7f7;
+    z-index:10;  
+    overflow:hidden;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.1);
+}
+          svg{
+              
+              z-index: 100;
+          }
+.menu li a{
+  display: block;
+  text-indent: -500em;
+  height: 5em;
+  width: 5em;
+  line-height: 5em;
+  text-align:center;
+  color:black;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+.menu li a:before {
+  font-family: FontAwesome;
+  speak: none;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+}
+.menu li a.fa fa-search:before {
+  content: "\f002";
+}
+.menu li a.archive:before {
+  content: "\f187";
+}
+.menu li a.pencil:before {
+  content: "\f040";
+}
+.menu li a.contact:before {
+  content: "\f003";
+}
+.menu li a.about:before {
+  content: "\f007";
+}
+.menu li a.home:before {
+  content: "\f039";
+}
+.menu-bar li a:hover,
+.menu li a:hover,
+.menu li:first-child a {
+  background: white;
+  color: #00e6e6;
+}
+.menu-bar{
+    overflow:hidden;
+    left:5em;
+    z-index:5;
+    width:0;
+    height:0;
+    transition: all 0.1s ease-in-out;
+}
+.menu-bar li a{
+  display: block;
+  height: 4em;
+  line-height: 4em;
+  text-align:center;
+  color: #72739f;
+  text-decoration:none;  
+  position: relative;
+  font-family:verdana;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+.menu-bar li:first-child a{
+    height:5em;
+    background: #267fdd;
+    color: #fff;    
+    line-height:5
+}
+
+
+.para{
+    color:#033f72;
+    padding-left:100px;
+    font-size:3em;
+    margin-bottom:20px;
+}
+          .active {
+              border-right:3px solid #3db5c2;
+          }
+    
+.open{
+    width:10em;
+    height:100%;
+}
+
+@media all and (max-width: 500px) {
+    .container{
+        margin-top:100px;
+    }
+    .menu{
+        height:5em;
+        width:100%;
+    }
+    .menu li{
+        display:inline-block;
+        float:left;
+    }
+    .menu-bar li a{
+        width:100%;
+    }
+    .menu-bar{
+        width:100%;
+        left:0;
+        height:0;
+    }
+    .open{
+        width:100%;
+        height:auto;
+    }
+    .para{
+    padding-left:5px;
+}  
+}
+@media screen and (max-height: 34em){
+  .menu li,
+  .menu-bar {
+    font-size:70%;
+  }
+}
+@media screen and (max-height: 34em) and (max-width: 500px){
+  .menu{
+        height:3.5em;
+    }
+}    
+    
+      
+      .footercolumn {
+  float: left;
+  border: 20px solid #F5F5F5;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footercontent
+{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.footerrow
+{
+  display: inline-block;
+}
+
+
+      
+      
+      
+      
+      
+      </style>
+      <script>
+          
+      $(document).ready(function(){
+$(".menu-button").click(function(){
+$(".menu-bar").toggleClass( "open" );
+})  
+})  
+          
+   var header = document.getElementById("sundu");
+var btns = header.getElementsByClassName("fa");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}       
+          
+      </script>
+  </head>
+  <body>    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+      
+      
+      <nav class="navbar navbar-light "  style="background-color:white;" style="padding-left:165;">
+           <a href=""><img src="panda1.jpg" height=30px class="d-inline-block align-top" alt=""></a>
+          <div class="topnav-right">
+              <a href=""><i class="fa fa-bell-o fa-2x" aria-hidden="true"  style="padding-right:15px"></i></a>
+              <a href=""><i class="fa fa-user fa-2x" aria-hidden="true"   style="padding-left:15px"></i></a>
+
+          </div>
+</nav>
+      
+      
+      <div class="container mt-3">
+  <h2>Content Store</h2>
+ <br>
+ <br>
+          <!--card-->
+          <div class="card w-100" style="width: 18rem;">
+  <div class="card-body" style="padding-right:200px">
+    <h5 class="card-title">Got bulk orders or almost similar order? Fill the order brief in the excel sheet </h5>
+    <p class="card-text">If you're wondering about an easy way to place orders  in large numbers,we provide a way customized just for that. Download our excel sheet , and fill the brief in the prescribed format and submit. In case you need any help,<a href=""><font color="#8c8c8c"><u>we are just a click away to assist you in placing the order</u></font></a></p>
+    <button type="button" class="btn btn-outline-primary">Order via Excel sheet</button>
+  </div>
+</div>
+          <br>
+          <br>
+          <!--cards-->
+          
+          
+   <div class="card-deck">
+  <div class="card">
+    
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Blog/Article</h5>
+                <h6>from ₹500</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+           <div style="padding-left:30px;padding-top:20px">
+                <h5>Newletter/E-mailer</h5>
+                <h6>from ₹1000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Whitepaper</h5>
+                <h6>from ₹2000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+</div>
+              
+      
+          
+           <div class="card-deck mt-4">
+  <div class="card">
+    
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>e-book</h5>
+                <h6>from ₹1000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Report/Guide</h5>
+                <h6>from ₹1000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Product Description</h5>
+                <h6>from ₹500</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+</div>
+          
+           <div class="card-deck mt-4">
+  <div class="card">
+    
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Website Content</h5>
+                <h6>from ₹1000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Video Script</h5>
+                <h6>from ₹1000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Company Profile/Broucher</h5>
+                <h6>from ₹500</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+</div>
+          
+           <div class="card-deck mt-4" style="width:34.5%;height:40%">
+               
+               
+  <div class="card" >
+    
+    <div class="card-body">
+        <div style="display:inline-flex">
+        <div>
+         <img src="peacock.png" class=" rounded-circle" alt="Cinque Terre"  style="width:90px">
+        </div>
+            <div style="padding-left:30px;padding-top:20px">
+                <h5>Press Release</h5>
+                <h6>from ₹2000</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+      <p class="card-text">Typically 450-400 words,an e-book is perfect for your target audience ranging from prospective customers to users </p>
+      <button type="button" class="btn btn-outline-primary">Order</button>
+    </div>
+  </div>
+
+</div>
+          
+          
+          
+</div>
+
+      
+      
+      
+      
+      
+      
+     <ul class="menu" id="sundu">
+
+     
+      <div class="side">
+      <li title="apps"><a href="#" class="fa fa-th-large active">apps</a></li>
+      <li title="search"><a href="#" class="fa fa-search"  >search</a></li>
+      <li title="home"><a href="#" class="fa fa-home">about</a></li>
+         </div>
+    </ul>
+      
+      
+      
+      
+      
+      
+      <div class="footercontent">
+<div class="footerrow">
+
+ <div class="footercolumn">
+  <a href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+ </div>
+  <div class="footercolumn">  
+  <a href="#"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+ </div>
+  <div class="footercolumn">
+  <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+ </div>
+   <div class="footercolumn">
+  <a href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+ </div>
+
+</div>
+<p style="color: grey;">Copyright @ 2019 White Panda Media Pvt. Ltd.</p>
+<p style="color: grey;">All rights reserved</p>
+<p ><a style="color: grey;" href="#">Privacy policy</a> | <a style="color: grey;" href="#">Terms of service</a> | <a style="color: grey;" href="#">Service Agreement</a> | <a style="color: grey;" href="#">Contact Us</a></p>
+</div>
+      
+      
+      
+      
+      
+      
+      
+      
+  </body>
+</html>
